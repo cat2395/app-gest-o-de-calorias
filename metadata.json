@@ -1,0 +1,6 @@
+{
+  "name": "Gestão de Consumo de Calorias",
+  "description": "Aplicativo para controle e planejamento de consumo de calorias, registro de alimentos e refeições, cadastro de receitas/preparos personalizados e cálculo de gasto energético diário.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

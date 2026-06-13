@@ -1,0 +1,316 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg-dark: #080c14;
+  --color-glass: rgba(255, 255, 255, 0.06);
+  --color-glass-border: rgba(255, 255, 255, 0.12);
+  --color-accent-green: #10b981;
+  --color-accent-orange: #f59e0b;
+}
+
+/* Base Body Layout representing the Frosted Glass Theme */
+html, body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: #080c14 !important;
+  color: #f8fafc !important;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-image: 
+    radial-gradient(circle at 10% 10%, #1e293b 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, #064e3b 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, #0f172a 0%, #080c14 100%) !important;
+  background-attachment: fixed !important;
+  background-size: cover !important;
+}
+
+/* Glass panel design rules */
+.glass-panel, 
+.bg-white, 
+#calendar-bar,
+#calories-ring-card,
+#macros-meter-card,
+#water-log-card,
+#diario-refeicoes-secao,
+#onboarding-form-container,
+#recipe-manager-card,
+#food-browser-modal {
+  background: rgba(255, 255, 255, 0.06) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3) !important;
+  color: #f8fafc !important;
+}
+
+/* Accent element override rules to handle dark backgrounds */
+h1, h2, h3, h4, h5, h6, 
+.text-slate-800, 
+.text-slate-900, 
+.text-slate-700, 
+.text-slate-755, 
+.text-slate-750 {
+  color: #f8fafc !important;
+}
+
+.text-slate-400, 
+.text-slate-500, 
+.text-slate-300 {
+  color: #94a3b8 !important;
+}
+
+/* Inside block components */
+.bg-slate-50, 
+.bg-slate-100, 
+.bg-slate-50\/50, 
+.bg-slate-100\/50,
+.bg-slate-55,
+.bg-slate-200\/50,
+.bg-slate-200\/40,
+.bg-slate-50\/50 {
+  background: rgba(255, 255, 255, 0.04) !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Log rows and items */
+div[id^="logged-item-"], 
+div[id^="recipe-card-"] {
+  background: rgba(255, 255, 255, 0.03) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  color: #f8fafc !important;
+}
+
+div[id^="logged-item-"]:hover, 
+div[id^="recipe-card-"]:hover {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-color: #10b981 !important;
+}
+
+/* Inputs, Selects, Textareas - beautifully blended glass form styles */
+input[type="text"], 
+input[type="number"], 
+input[type="date"], 
+textarea, 
+select {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  color: #ffffff !important;
+}
+
+input[type="text"]::placeholder, 
+input[type="number"]::placeholder, 
+textarea::placeholder {
+  color: rgba(255, 255, 255, 0.3) !important;
+}
+
+input[type="text"]:focus, 
+input[type="number"]:focus, 
+input[type="date"]:focus, 
+textarea:focus, 
+select:focus {
+  border-color: #10b981 !important;
+  outline: none !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Glass form inputs inside modal panels */
+#modal-food-search,
+#custom-food-title,
+#custom-food-portion,
+#custom-food-unit,
+#custom-food-cals,
+#custom-food-protein,
+#custom-food-carb,
+#custom-food-fat {
+  background: rgba(0, 0, 0, 0.2) !important;
+  color: #ffffff !important;
+}
+
+/* Modals overlays & drawers background colors */
+.bg-black\/50 {
+  background-color: rgba(6, 10, 18, 0.8) !important;
+  backdrop-filter: blur(12px) !important;
+}
+
+/* Buttons primary & secondary stylings */
+.bg-slate-900, 
+button.bg-slate-900 {
+  background: rgba(255, 255, 255, 0.08) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+}
+
+.bg-slate-900:hover, 
+button.bg-slate-900:hover {
+  background: rgba(255, 255, 255, 0.15) !important;
+}
+
+/* Action highlights mapped to accent-green */
+.bg-emerald-600,
+button.bg-emerald-600,
+#submit-log-catalog-food-btn,
+#onboarding-submit-btn {
+  background: #10b981 !important;
+  color: #080c14 !important;
+  font-weight: 700 !important;
+  border: none !important;
+}
+
+.bg-emerald-600:hover,
+button.bg-emerald-600:hover,
+#submit-log-catalog-food-btn:hover,
+#onboarding-submit-btn:hover {
+  background: #34d399 !important;
+}
+
+.text-emerald-500, 
+.text-emerald-600, 
+.text-emerald-700 {
+  color: #10b981 !important;
+}
+
+.text-emerald-400 {
+  color: #34d399 !important;
+}
+
+.bg-emerald-500\/10 {
+  background: rgba(16, 185, 129, 0.15) !important;
+}
+
+.bg-emerald-50\/5 {
+  background: rgba(16, 185, 129, 0.05) !important;
+}
+
+.bg-emerald-100 {
+  background: rgba(16, 185, 129, 0.2) !important;
+  color: #34d399 !important;
+}
+
+/* Water tracker & buttons styling presets */
+.bg-blue-50\/50, .bg-blue-50\/70 {
+  background: rgba(59, 130, 246, 0.08) !important;
+  border-color: rgba(59, 130, 246, 0.15) !important;
+}
+
+.text-blue-700, .text-blue-500 {
+  color: #60a5fa !important;
+}
+
+button[id^="add-water-"] {
+  background: rgba(255, 255, 255, 0.03) !important;
+  border-color: rgba(59, 130, 246, 0.25) !important;
+  color: #60a5fa !important;
+}
+
+button[id^="add-water-"]:hover {
+  background: rgba(59, 130, 246, 0.15) !important;
+}
+
+/* Metabolic footer cards items */
+#metabolic-info-cards {
+  background: rgba(255, 255, 255, 0.04) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Recipe specific colors */
+.bg-teal-550,
+.bg-teal-600 {
+  background: #14b8a6 !important;
+  color: #080c14 !important;
+}
+
+.bg-teal-50 {
+  background: rgba(20, 184, 166, 0.08) !important;
+  border-color: rgba(20, 184, 166, 0.15) !important;
+  color: #e2fbf7 !important;
+}
+
+.text-teal-800, .text-teal-500 {
+  color: #2dd4bf !important;
+}
+
+/* Navigation & Header layout adjustments */
+header, #root-app-div header {
+  background: rgba(6, 10, 18, 0.75) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+#tabs-navigation {
+  background: rgba(255, 255, 255, 0.03) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+#tabs-navigation button {
+  color: #94a3b8 !important;
+}
+
+#tabs-navigation button[class*="bg-slate-800"] {
+  background: rgba(255, 255, 255, 0.08) !important;
+  color: #10b981 !important;
+}
+
+/* Decorative Footer */
+footer {
+  background: rgba(6, 10, 18, 0.6) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.06) !important;
+  color: #64748b !important;
+}
+
+/* SVGs & circular ring meters styling alignment */
+circle.stroke-slate-100 {
+  stroke: rgba(255, 255, 255, 0.08) !important;
+}
+
+circle.stroke-emerald-500 {
+  stroke: #10b981 !important;
+}
+
+/* Custom form range tracker styling */
+input[type="range"] {
+  accent-color: #10b981;
+}
+
+/* Custom scrollbar matching dark mode */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* AI coach & search adjustments */
+#ai-coach-drawer {
+  background: rgba(15, 23, 42, 0.9) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+}
+
+#coach-chat-history {
+  background: transparent !important;
+}
+
+#coach-chat-history div[class*="bg-white"] {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  color: #f8fafc !important;
+}
+
+#coach-chat-history div[class*="bg-slate-900"] {
+  background: #10b981 !important;
+  color: #080c14 !important;
+}
+
+/* Make sure modal selectors don't show black text */
+select option {
+  background-color: #1e293b !important;
+  color: #ffffff !important;
+}
